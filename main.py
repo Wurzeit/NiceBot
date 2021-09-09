@@ -38,6 +38,9 @@ async def on_message(message):
             return
         message.guild.voice_client.play(discord.FFmpegPCMAudio(music))
 
+    if message.content == '!nice.help':
+        await message.channel.send('This bot was created by Wurzeit...Nice')
+
 @client.event
 async def on_reaction_add(reaction, user):
     vc = reaction.message.guild.voice_client
