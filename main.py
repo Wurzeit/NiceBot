@@ -36,6 +36,7 @@ async def on_message(message):
         if message.author.voice is None:
             print('ボイスチャンネルに接続していません')
             return
+        print('Nice')
         message.guild.voice_client.play(discord.FFmpegPCMAudio(music))
 
     if message.content == '!nice.help':
@@ -54,6 +55,7 @@ async def on_reaction_add(reaction, user):
         if reaction.message.author.voice is None:
             print('ボイスチャンネルに接続していません')
             return
+        print('Nice')
         reaction.message.guild.voice_client.play(discord.FFmpegPCMAudio(music))
 
 
