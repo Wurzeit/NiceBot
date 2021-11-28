@@ -32,7 +32,7 @@ async def on_message(message):
         await vc.disconnect()
         print('通話から切断しました')
 
-    if message.content == 'thumbsup' or message.content == 'thumbsup_tone1' or message.content == 'thumbsup_tone2' or message.content == 'thumbsup_tone3' or message.content == 'thumbsup_tone4' or message.content == 'thumbsup_tone5':
+    if message.content == '👍' or message.content == '👍🏻' or message.content == '👍🏼' or message.content == '👍🏽' or message.content == '👍🏾' or message.content == '👍🏿':
         if message.author.voice is None:
             print('ボイスチャンネルに接続していません')
             return
@@ -51,7 +51,7 @@ async def on_reaction_add(reaction, user):
     vc = reaction.message.guild.voice_client
     music = 'nice.mp3'
     print(f"{user}さんの付けたリアクションを検出しました")
-    if reaction.emoji == '👍':
+    if reaction.emoji == '👍' or reaction.emoji == '👍' or reaction.emoji == '👍🏻' or reaction.emoji == '👍🏼' or reaction.emoji == '👍🏽' or reaction.emoji == '👍🏾' or reaction.emoji == '👍🏿':
         if reaction.message.author.voice is None:
             print('ボイスチャンネルに接続していません')
             return
