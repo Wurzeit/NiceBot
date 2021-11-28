@@ -32,6 +32,8 @@ async def on_message(message):
         await vc.disconnect()
         print('通話から切断しました')
 
+
+    # 絵文字を直接書き込む
     if message.content == '👍' or message.content == '👍🏻' or message.content == '👍🏼' or message.content == '👍🏽' or message.content == '👍🏾' or message.content == '👍🏿':
         if message.author.voice is None:
             print('ボイスチャンネルに接続していません')
