@@ -32,7 +32,7 @@ async def on_message(message):
         await vc.disconnect()
         print('通話から切断しました')
 
-    if message.content == '👍':
+    if message.content == 'thumbsup' or message.content == 'thumbsup_tone1' or message.content == 'thumbsup_tone2' or message.content == 'thumbsup_tone3' or message.content == 'thumbsup_tone4' or message.content == 'thumbsup_tone5':
         if message.author.voice is None:
             print('ボイスチャンネルに接続していません')
             return
