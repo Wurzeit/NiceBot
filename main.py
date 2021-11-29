@@ -34,7 +34,7 @@ async def on_message(message):
 
 
     # 絵文字を直接書き込む
-    if message.content == '👍' or message.content == '👍🏻' or message.content == '👍🏼' or message.content == '👍🏽' or message.content == '👍🏾' or message.content == '👍🏿' or message.content == 'b' or message.content == 'nice' or message.content == 'ナイス' or message.content == 'ないす':
+    if message.content == '👍' or message.content == '👍🏻' or message.content == '👍🏼' or message.content == '👍🏽' or message.content == '👍🏾' or message.content == '👍🏿' or message.content == 'b' or message.content == 'nice' or message.content == 'ナイス' or message.content == 'ないす' or message.content == 'ナイスな椅子':
         if message.author.voice is None:
             print('ボイスチャンネルに接続していません')
             return
