@@ -46,7 +46,7 @@ async def on_message(message):
                                    ----------List of Functions----------\n\
                                    ・!nice   bot joins the call\n\
                                    ・!bad   bot leaves the call\n\
-                                   ・👍   Nice')
+                                   ・👍 , nice, ナイス, ないす, b.....Nice')
 
 @client.event
 async def on_reaction_add(reaction, user):
