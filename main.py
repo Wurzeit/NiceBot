@@ -43,6 +43,7 @@ async def on_message(message):
 
     if message.content == 'ナイス':
         await message.channel.send('Nice...')
+        print('send nice')
 
     if message.content == '!nice.help':
         await message.channel.send('This bot was created by Wurzeit...Nice\n\n\
@@ -50,6 +51,7 @@ async def on_message(message):
                                    ・!nice   bot joins the call\n\
                                    ・!bad   bot leaves the call\n\
                                    ・👍 , nice, ナイス, ないす, b.....Nice')
+        print('send nice.help')
 
 @client.event
 async def on_reaction_add(reaction, user):
