@@ -49,9 +49,8 @@ async def on_message(message):
                                    ・👍 , nice, ナイス, ないす, b.....Nice')
         print('send nice.help')
 
-    if message.content == 'ナイス':
+    if message.content == 'いいね':
         await message.channel.send('Nice...')
-        print('send nice')
 
 @client.event
 async def on_reaction_add(reaction, user):
