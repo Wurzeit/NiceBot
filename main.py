@@ -42,7 +42,7 @@ async def on_message(message):
         message.guild.voice_client.play(discord.FFmpegPCMAudio(music))
 
     if message.content == '!nice.help':
-        await message.channel.send('This bot was created by Wurzeit...Nice\n\n\
+        await message.channel.send('This bot was created by Wurzeit...Nice...version2.1\n\n\
                                    ----------List of Functions----------\n\
                                    ・!nice   bot joins the call\n\
                                    ・!bad   bot leaves the call\n\
