@@ -1,9 +1,13 @@
 import discord
 import TOKEN
+import time
 
 TOKEN = TOKEN.TOKEN
 
 client = discord.Client()
+
+# sleep time
+st=0.7
 
 
 @client.event
@@ -39,6 +43,16 @@ async def on_message(message):
             print('ボイスチャンネルに接続していません')
             return
         print('Nice')
+
+
+        # 音声を再生
+        try:
+            time.sleep(st)
+            message.guild.voice_client.stop()
+        except:
+            pass
+        finally:
+            print("Err")
         message.guild.voice_client.play(discord.FFmpegPCMAudio(music))
 
     if message.content == '!nice.help':
@@ -62,6 +76,15 @@ async def on_reaction_add(reaction, user):
             print('ボイスチャンネルに接続していません')
             return
         print('Nice')
+
+        # 音声を再生
+        try:
+            time.sleep(st)
+            reaction.message.guild.voice_client.stop()
+        except:
+            pass
+        finally:
+            print("Err")
         reaction.message.guild.voice_client.play(discord.FFmpegPCMAudio(music))
 
 
