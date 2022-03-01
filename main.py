@@ -57,14 +57,18 @@ async def on_message(message):
 
     if message.content == '!nice.help':
         await message.channel.send('This bot was created by Wurzeit...Nice...version2.2\n\n\
-                                   ----------List of Functions----------\n\
-                                   ・!nice   bot joins the call\n\
-                                   ・!bad   bot leaves the call\n\
-                                   ・👍 , nice, ナイス, ないす, b.....Nice')
+----------List of Functions----------\n\
+・!nice   bot joins the call\n\
+・!bad   bot leaves the call\n\
+・👍 , nice, ナイス, ないす, b.....Nice')
         print('send nice.help')
 
     if message.content == 'いいね' or message.content == 'いいですね':
         await message.channel.send('Nice...')
+
+    if message.content == '!nice.volume':
+        await message.channel.send('通話に参加しているbotを右クリックすることで音量調節画面が開きます。\n\
+デフォルトの音量では少し大きめの音がなるのでぜひ調整してください。')
 
 @client.event
 async def on_reaction_add(reaction, user):
