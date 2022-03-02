@@ -67,8 +67,7 @@ async def on_message(message):
         await message.channel.send('Nice...')
 
     if message.content == '!nice.volume':
-        await message.channel.send('通話に参加しているbotを右クリックすることで音量調節画面が開きます。\n\
-デフォルトの音量では少し大きめの音がなるのでぜひ調整してください。')
+        await message.channel.send('The default volume is nice and big...')
 
 @client.event
 async def on_reaction_add(reaction, user):
