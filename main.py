@@ -9,6 +9,9 @@ client = discord.Client()
 # sleep time
 st=0.7
 
+# voice
+music = 'nice.mp3'
+source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(music), volume=0.5)
 
 @client.event
 async def on_ready():
@@ -17,10 +20,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    # voice
-    source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(music), volume=0.5)
     vc = message.guild.voice_client
-    music = 'nice.mp3'
     if message.author.bot:
         return
     if message.content == '!nice':
@@ -73,8 +73,6 @@ async def on_message(message):
 
 @client.event
 async def on_reaction_add(reaction, user):
-    # voice
-    source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(music), volume=0.5)
     vc = reaction.message.guild.voice_client
     music = 'nice.mp3'
     print(f"{user}さんの付けたリアクションを検出しました")
