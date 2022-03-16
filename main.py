@@ -9,6 +9,9 @@ client = discord.Client()
 # sleep time
 st=0.7
 
+# voice
+music = 'nice.mp3'
+source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(music), volume=0.5)
 
 @client.event
 async def on_ready():
@@ -18,7 +21,6 @@ async def on_ready():
 @client.event
 async def on_message(message):
     vc = message.guild.voice_client
-    music = 'nice.mp3'
     if message.author.bot:
         return
     if message.content == '!nice':
@@ -53,7 +55,7 @@ async def on_message(message):
             pass
         finally:
             print("Err")
-        message.guild.voice_client.play(discord.FFmpegPCMAudio(music))
+        message.guild.voice_client.play(source)
 
     if message.content == '!nice.help':
         await message.channel.send('This bot was created by Wurzeit...Nice...version2.2\n\n\
@@ -88,7 +90,7 @@ async def on_reaction_add(reaction, user):
             pass
         finally:
             print("Err")
-        reaction.message.guild.voice_client.play(discord.FFmpegPCMAudio(music))
+        reaction.message.guild.voice_client.play(source)
 
 
 client.run(TOKEN)
